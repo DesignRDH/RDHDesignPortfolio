@@ -1,0 +1,274 @@
+@media (min-width: 375px) and (max-width: 1980px) {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #adacac;
+    }
+
+    .title {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 2em;
+        color: #333;
+        background-color: aliceblue;
+        border: solid black 5px;;
+    }
+
+   h2,
+   h5,
+   p {
+    text-align: center;
+   } 
+
+
+    div.gallery {
+  border: 1px solid #000000;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+    height: auto;
+    padding-top: 10px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.card {
+    border: #000000 1px solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+
+.name{
+    font-size: 24px;
+    color: #333;
+}
+
+.title1 {
+  color: #4e4e4e;
+  font-size: 18px;
+}
+
+.social {
+       border-bottom: #1f1f1f 1px solid;
+    border-top: solid black 1px;
+  font-size: 18px;
+  color: #1f1f1f;
+  margin-top: 10px;
+}
+
+.contact {
+    border-bottom: #1f1f1f 1px solid;
+    border-top: solid black 1px;
+    font-size: 18px;
+    color: #1f1f1f;
+    margin-top: 10px;
+}
+
+.whatsapp,
+.email,
+.linkedin {
+  font-size: 18px;
+  color: #1f1f1f;
+  margin-top: 10px;
+}
+
+.fa-facebook {
+    font-size: xx-large;
+    color: #3b5998;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block; /* Make the button a block element */
+    margin: auto; /* Center the button */
+}
+
+.fa-linkedin {
+    font-size: xx-large;
+    color: #0077b5;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block; /* Make the button a block element */
+    margin: auto; /* Center the button */
+}
+
+.fa-instagram {
+    font-size: xx-large;
+    color: #e1306c;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block; /* Make the button a block element */
+    margin: auto; /* Center the button */
+}
+
+
+.fa-whatsapp {
+  font-size: xx-large;
+  color: #04AA6D;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block; /* Make the button a block element */
+  margin: auto; /* Center the button */
+}
+
+.fa-envelope {
+  font-size: xx-large;
+  color: #000000;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: auto; /* Center the button */
+}
+}
+
+@media (min-width: 375px) {
+    .responsive {
+        width: 50%;
+        padding: 0 6px;
+    }
+
+    .box {
+        width: 305px;
+        margin: 0 auto;
+        border-radius: 8px;
+        margin-left: 10%;
+        border-bottom: #000000 solid 1px;
+    }
+
+    .logo img {
+        width: 50%;
+        height: auto;
+        margin-left: 25%;
+    }
+}
+
+@media (min-width: 425px) {
+    .box {
+        width: 340px;
+        margin: 0 auto;
+        border-radius: 8px;
+        margin-left: 10%;
+    }
+}
+
+@media (min-width: 768px) {
+.responsive {
+    width: 50%;
+}
+
+    .box {
+        width: 630px;
+        margin: 0 auto;
+        border-radius: 8px;
+        margin-left: 10%;
+    }
+
+  .logo {
+    width: 60%;
+    margin-left: 25%;
+}
+}
+
+@media (min-width: 1024px) {
+    .responsive {
+        width: 40%;
+    }
+
+    .box {
+        width: 850px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 8px;
+        margin-left: 10%;
+    }
+
+    .gallery {
+        width: 100%;
+        padding: 0 6px;
+        margin-left: 25%;
+    }
+
+    .logo {
+        width: 80%;
+        margin-left: 12%;
+    }
+
+    .card {
+        width: 600px;
+        margin-left: 15%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .box {
+        border-radius: 8px;
+        margin-left: 20%;
+    }
+}
+
+
+@media (min-width: 1440px) {
+    .box {
+       border-radius: 8px;
+        margin-left: 20%;
+    }
+
+    .logo {
+     margin-left: 10%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .box {
+        margin-left: 30%;
+    }
+
+    .logo {
+        margin-left: 13%;
+    }
+}
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
