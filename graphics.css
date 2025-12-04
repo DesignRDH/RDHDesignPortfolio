@@ -1,68 +1,91 @@
 @media (min-width: 320px) and (max-width: 1980px) {
   body {
     margin: 0;
-    background-color: #adacac;
+    background: linear-gradient(135deg, #9398b1 0%, #444444 100%);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
   }
 
-    .get-in-touch {
-      background-color: #1f1f1f;
-  height: 20px;
-  text-align: center;
-}
+  .get-in-touch {
+    background-color: #1f1f1f;
+    padding: 15px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
 
-.fa-bars {
-  color: #ddd;
-}
-.facebook {
-  margin-left: -15%;
-}
+  .fa-bars {
+    color: #ddd;
+  }
 
-.insta {
-  margin-top: -5.5%;
-  margin-left: 5%;
-}
+  .facebook,
+  .insta {
+    display: inline-block;
+    margin: 0;
+  }
 
-.facebook a {
-  color: #0077b5;
- }
+  .facebook a {
+    color: #0077b5;
+  }
 
- .insta a {
-  color: #e1306c;
- }
+  .insta a {
+    color: #e1306c;
+  }
+
+  .facebook a,
+  .insta a {
+    font-size: 1.5em;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+  }
+
+  .facebook a:hover,
+  .insta a:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
 
   .logo {
-    width: 50%;
-    background-color: transparent;
-  }
-
-  .topnav {
-    overflow: hidden;
-    border: solid black 1px;
-  }
-
-  .topnav a {
-    float: left;
+       background-color: transparent;
     display: block;
-    color: #000000;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-
-  .topnav a:hover {
-    background-color: #1f1f1f;
-    color: black;
-  }
-
-  .topnav a.active,
-  .topnav a.active1 {
-    background-color: #1f1f1f;
-    color: #ddd;
+    margin: 20px auto;
+    width: 200px;
   }
 
   .topnav .icon {
     display: none;
+  }
+
+  /* Existing styles */
+  /* Navbar container */
+  .topnav {
+    background-color: #87868600;
+    overflow: hidden;
+    border: solid black 1px;
+  }
+
+  /* Links inside the navbar */
+  .topnav a {
+    float: left;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  /* Add a red background color to navbar links on hover */
+  .topnav a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: #474747;
+  }
+
+  .topnav a.active,
+  .topnav a.active1 {
+    background-color: #474747;
+    color: black;
   }
 
   .dropdown {
@@ -82,12 +105,12 @@
   }
 
   .dropdown-content {
+    min-width: 160px;
     background-color: #555;
     position: absolute;
     display: none;
     border: solid black 1px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    margin-left: 2%;
     z-index: 1;
   }
 
@@ -105,7 +128,6 @@
     color: #ddd;
   }
 
-
   .dropdown-content a:hover {
     background-color: #ddd;
     color: black;
@@ -121,65 +143,136 @@
     box-sizing: inherit;
   }
 
-  .column {
+  h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.5em;
+    margin: 40px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  div.gallery::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.5));
+    z-index: 1;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  div.gallery:hover::before {
+    opacity: 0.3;
+  }
+
+  div.gallery > a {
+    position: relative;
+    display: block;
+    height: 100%;
+  }
+
+  div.gallery {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 350px;
+    cursor: pointer;
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  div.gallery:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  div.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+  }
+
+  div.gallery:hover img {
+    transform: scale(1.15);
+    filter: brightness(0.7);
+  }
+
+  div.desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.95),
+      rgba(0, 0, 0, 0.8),
+      transparent
+    );
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: block;
+    min-height: 120px;
+    opacity: 0;
+    padding-top: 40px;
+  }
+
+  div.gallery:hover div.desc {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  div.desc a {
+    color: #fff;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    position: relative;
+  }
+
+  div.desc a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+    display: inline-block;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .gallery-item {
+    padding: 12px;
     float: left;
-    width: 33.3%;
-    margin-bottom: 16px;
-    padding: 0 8px;
+    width: 25%;
+    margin-bottom: 20px;
   }
-
-  .profilepic {
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-  }
-
-  .card {
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 8px;
-    width: 220px;
-    border: white 1px solid;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: auto;
-    text-align: center;
-    font-family: arial;
-  }
-
-
-  h1{
-    text-align: center;
-  }
-
-div.gallery {
-  border: 1px solid #000000;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
-}
 
   .fa-linkedin {
     font-size: xx-large;
@@ -194,9 +287,9 @@ div.desc {
     /* Center the button */
   }
 
-.fa-whatsapp {
+  .fa-whatsapp {
     font-size: xx-large;
-    color: #04AA6D;
+    color: #04aa6d;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -220,7 +313,7 @@ div.desc {
   }
 
   .fa-html5 {
-        font-size: xx-large;
+    font-size: xx-large;
     color: orangered;
     padding: 12px 20px;
     border: none;
@@ -231,7 +324,7 @@ div.desc {
   }
 
   .fa-css {
-        font-size: xx-large;
+    font-size: xx-large;
     color: darkslateblue;
     padding: 12px 20px;
     border: none;
@@ -240,48 +333,96 @@ div.desc {
     display: block;
     margin: auto;
   }
+
+  #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #04aa6d; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
 }
 
 /* START OF RWD */
 @media (min-width: 320px) {
   .logo {
-    margin-left: 25%;
+    width: 180px;
   }
+  
 }
 
 @media (min-width: 360px) {
-  .insta {
-    margin-top: -4.5%;
-  }
 }
 
 @media (min-width: 375px) {
 }
 
 @media (min-width: 390px) {
-  }
+}
 
 @media (min-width: 412px) {
-  .insta {
-    margin-top: -4%;
+}
+
+@media (min-width: 768px) {
+   .logo {
+   width: 220px;
+ }
+
+  .active1 {
+    margin-left: 40%;
+  }
+
+  #responsive {
+    width: 25%;
   }
 }
 
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
+@media (min-width: 1280px) {
+  .logo {
+    width: 250px;
+  }
+
+}
+
+@media (min-width: 1366px) {
+}
+
+@media (min-width: 1440px) {
+}
+
+@media (min-width: 1920px) {
+  .logo {
+    width: 280px;
+  }
+
+  #responsive {
+    width: 25%;
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.clearfix {
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 600px) {
-
   .topnav a:not(:first-child),
   .dropdown .dropbtn {
     display: none;
@@ -325,6 +466,33 @@ div.desc {
   }
 }
 
+@media only screen and (max-width: 700px) {
+  .gallery-item {
+    width: 50%;
+    padding: 8px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .gallery-item {
+    width: 100%;
+    padding: 10px 15px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  div.gallery {
+    height: 300px;
+  }
+
+  div.desc {
+    font-size: 13px;
+    padding: 15px;
+  }
+}
+
 @media screen and (max-width: 650px) {
   .column {
     width: 100%;
@@ -332,81 +500,38 @@ div.desc {
   }
 }
 
-@media (min-width: 768px) {
- .topnav a {
-  float: left;
- }
-
- .active1 {
-  margin-left: 40%;
- }
-
-  .responsive {
-    width: 43%;
-    margin-left: 6%;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-
- .facebook {
-  margin-left: -1%;
- }
- 
- .insta {
-  margin-top: -2.2%;
- }
-}
-
-@media (min-width: 820px) {
-  .responsive {
-    width: 35%;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (min-width: 1280px) {
-.insta {
-  margin-top: -1.3%;
+#responsive:nth-child(1) div.gallery {
+  animation-delay: 0.1s;
 }
+#responsive:nth-child(2) div.gallery {
+  animation-delay: 0.2s;
 }
-
-@media (min-width: 1366px) {
-
-.insta {
-  margin-top: -1.1%;
+#responsive:nth-child(3) div.gallery {
+  animation-delay: 0.3s;
 }
+#responsive:nth-child(4) div.gallery {
+  animation-delay: 0.4s;
 }
-
-@media (min-width: 1440px) {
-
-.insta {
-  margin-top: -1%;
+#responsive:nth-child(5) div.gallery {
+  animation-delay: 0.5s;
 }
+#responsive:nth-child(6) div.gallery {
+  animation-delay: 0.6s;
 }
-
-@media (min-width: 1920px) {
-.logo {
-  width: 30%;
-  margin-left: 35%;
+#responsive:nth-child(7) div.gallery {
+  animation-delay: 0.7s;
 }
-
-.active1 {
-  margin-left: 43%;
-}
-
-.responsive {
-  width: 22%;
-  margin-left: 2%;
-}
-
-.facebook {
-  margin-left: 2%;
-}
-.insta {
-  margin-top: -0.9%;
-}
-}
-
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+#responsive:nth-child(8) div.gallery {
+  animation-delay: 0.8s;
 }
