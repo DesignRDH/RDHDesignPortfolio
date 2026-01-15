@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" , content="initial-scale=1.0">
+  <title>RDH Design</title>
+  <link rel="icon" type="image/x-icon" href="Logo.png">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="">
+  <meta name="keyword" content="">
+  <script src="https://kit.fontawesome.com/8adb1a4efd.js" crossorigin="anonymous"></script>
+  <script>
+    // Safe client-side redirect function
+    function safeRedirect(url) {
+      // Only allow relative URLs or trusted domains
+      const trustedDomains = ['wa.me']; // Add your trusted domains here
+      try {
+        // Allow all mailto: links
+        if (url.startsWith('mailto:')) {
+          window.open(url, '_blank', 'noopener,noreferrer');
+          return;
+        }
+        const parsedUrl = new URL(url, window.location.origin);
+        if (
+          parsedUrl.origin === window.location.origin ||
+          trustedDomains.some(domain => parsedUrl.hostname.endsWith(domain))
+        ) {
+          window.open(parsedUrl.href, '_blank', 'noopener,noreferrer');
+        } else {
+          alert('Redirection blocked: Untrusted URL');
+        }
+      } catch (e) {
+        alert('Invalid URL');
+      }
+    }
+    // Example usage: safeRedirect('/about.html');
+    // Example usage: safeRedirect('https://yourdomain.com/page');
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <div class="get-in-touch">
+      <div class="CV">
+        <a href="Regan Harebottle CV.pdf" target="_blank">
+          <i class="fa-solid fa-file"></i>
+        </a>
+        <p>CV</p>
+      </div>
+
+      <div class="linkedin">
+        <a href="https://www.linkedin.com/in/regan-harebottle-34a8b4262/" target="_blank">
+          <i class="fa fa-linkedin">
+          </i>
+        </a>
+        <p>LinkedIn</p>
+      </div><!--linkedin-->
+
+      <div class="git-hub">
+        <a href="https://github.com/DesignRDH" target="_blank">
+          <i class="fa-brands fa-github">
+          </i>
+        </a>
+        <p>GitHub</p>
+      </div><!--git-hub-->
+
+    </div>
+  </header>
+
+  <section class="about-section">
+    <div class="about-me">
+      <h1>
+        <u>Who am I?
+        </u>
+      </h1>
+
+      <img src="profile-pictuire.jpg" alt="Regan" class="profilepic">
+
+      <p>My name is Regan Harebottle and I am an up-coming Front-end Website Developer.
+        <br>
+        <br>
+
+        I develop wonderful and responsive websites for all devices.
+
+        <br>
+        <br>
+
+        I also do Graphic Design.
+      </p>
+  </section><!--about-section-->
+
+  <section class="company">
+    <h1>
+      <u>
+        About RDH Design
+      </u>
+    </h1>
+
+    <img src="Logo.png" alt="Company Logo" class="company-logo">
+
+    <p>Started in June of 2025, I decided to start my own design company to help businesses and individuals create
+      stunning visual identities and websites.</p>
+
+    <p>Hoping to make a significant impact in the design industry through creativity and innovation.</p>
+
+  </section>
+
+  <section class="studies">
+
+    <h1>
+      <u>
+        My Studies
+      </u>
+    </h1>
+
+    <p>Most of my studies I did off <a href="https://www.udemy.com/" target="_blank">UDEMY</a>
+      where I completed courses such as:
+    <ul>
+      <li>Learn HTML and CSS from Scratch - Build Responsive Websites</li>
+      <li> PHP Web Development with MySQL</li>
+    </ul>
+    </p>
+
+
+    <p> But I have also done a lot self teaching which mainly came from
+      <a href="https://www.w3schools.com/" target="_blank"> W3Schools.</a>
+      this is where I learned extra HTML, CSS, JavaScript and PHP languages.
+    </p>
+
+    <p> I have studied my Graphic Design through<a href="https://attikimberley.co.za/" target="_blank"> ATTI </a>
+      in Kimberley, South Africa. We covered topics such as:
+    <ul>
+      <li> Adobe Photoshop</li>
+      <li> Adobe Fireworks</li>
+      <li> CorelDRAW</li>
+    </ul>
+    </p>
+  </section>
+
+  <section class="title">
+    <h1>
+      <u>
+        Languages I use
+      </u>
+    </h1>
+
+    <div class="languages">
+      <h2>
+        Hypertext Markup Language (HTML5)
+        <i class="fa-brands fa-html5"></i>
+        </a>
+      </h2>
+
+      <h2>
+        Cascading Style Sheets
+        (CSS)
+        <i class="fa-brands fa-css"></i>
+        </a>
+      </h2>
+
+      <h2>
+        Javascript
+        <i class="fa-brands fa-js"></i>
+        </a>
+      </h2>
+
+      <h2>PHP
+        <i class="fa-brands fa-php"></i>
+        </a>
+      </h2>
+
+      <h2>SQL Databases
+        <i class="fa-solid fa-database"></i>
+        </a>
+      </h2>
+  </section>
+
+  <section class="title">
+    <h1>
+      <u>
+        Graphic Design Software I use
+      </u>
+    </h1>
+
+    <div class="software">
+      <h2>Adobe Photoshop
+        <i class="fa-brands fa-adobe"></i>
+        </a>
+      </h2>
+
+      <h2>CorelDRAW
+        <i class="fa-solid fa-draw-polygon"></i>
+        </a>
+      </h2>
+
+      <h2>Adobe Fireworks
+        <i class="fa-brands fa-adobe"></i>
+        </a>
+      </h2>
+
+    </div>
+  </section>
+
+  <br>
+
+  <div class="row">
+
+    <div class="column">
+
+      <section class="portfolio">
+        <h1>My Wonderful Designs</h1>
+        <!--Portfolio Gallery Logo-->
+
+        <div class="gallery-item">
+          <div class="gallery">
+            <a target="_blank" href="/Designs/Bird Club Logo 11 (1).jpg">
+              <img src="/Designs/Bird Club Logo 11 (1).jpg" alt="Gariep Bird Club Logo" width="600" height="400">
+            </a>
+            <div class="desc">Gariep Bird Club Logo</div>
+          </div>
+        </div>
+
+
+        <div class="gallery-item">
+          <div class="gallery">
+            <a target="_blank" href="/Designs/HeronMapLogo.jpg">
+              <img src="/Designs/HeronMapLogo.jpg" alt="HeronMapLogo" width="600" height="400">
+            </a>
+            <div class="desc">HeronryMAP logo</div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery">
+            <a target="_blank" href="/Designs/Sympsium Logo.jpg">
+              <img src="/Designs/Sympsium Logo.jpg" alt="National Symposium of Biological Invasions 2024" width="600"
+                height="400">
+            </a>
+            <div class="desc">National Symposium of Biological Invasions 2024 logo (color version)</div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery">
+            <a target="_blank" href="/Designs/Logo 8 Greyscale with white outline.jpg">
+              <img src="/Designs/Logo 8 Greyscale with white outline.jpg"
+                alt="National Symposium of Biological Invasions 2024 Greyscale" width="600" height="400">
+            </a>
+            <div class="desc">National Symposium of Biological Invasions 2024 logo (greyscale version)</div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery">
+            <a target="_blank" href="/Designs/20250102143404_1.jpg">
+              <img src="/Designs/20250102143404_1.jpg" alt="Liveries for the Thranda Grand Caravan" width="600"
+                height="400">
+            </a>
+            <div class="desc">I painted some liveries for the Thranda Grand Caravan C208 to see more click
+              <a href="https://forums.x-plane.org/profile/991401-v2_rem/">here</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery">
+            <a target="_blank" href="/Designs/Map Siege of Kimberley copy.jpg">
+              <img src="/Designs/Map Siege of Kimberley copy.jpg" alt="Map Siege of Kimberley" width="600" height="400">
+            </a>
+            <div class="desc">
+              Map of the siege of Kimberley
+              <br>
+              Did some work for someone for a book.
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery">
+            <a target="_blank" href="/Designs/IMAGE 22.jpg">
+              <img src="/Designs/IMAGE 22.jpg" alt="MAP OF KIMBERLEY" width="600" height="400">
+            </a>
+            <div class="desc">Map of Kimberley with original text (ORANG visible)</div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery">
+            <a target="_blank" href="/Designs/IMAGE 22 (2).jpg">
+              <img src="/Designs/IMAGE 22 (2).jpg" alt="MAP OF KIMBERLEY without ORANG" width="600" height="400">
+            </a>
+            <div class="desc">Map of Kimberley with ORANG letters removed</div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery">
+            <a target="_blank" href="/Designs/Orange Gradient.jpg">
+              <img src="/Designs/Orange Gradient.jpg" alt="Advert" width="600" height="400">
+            </a>
+            <div class="desc">Designed an advert for someone.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="live-websites">
+        <h1>Live Websites</h1>
+
+        <div class="gallery-item">
+          <div class="gallery">
+            <a target="_blank" href="https://gariepbirdclub.org.za/">
+              <img src="/Designs/Bird Club Logo 11 (1).jpg" alt="Gariep Bird Club Logo" width="600" height="400">
+            </a>
+            <div class="desc">Gariep Bird Club</div>
+          </div>
+        </div>
+
+        <div class="contact-container">
+
+        </div>
+    </div>
+    </section>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <footer>
+      <div class="botnav">
+        <div class="get-in-touch">
+          <div class="CV">
+            <a href="Regan Harebottle CV.pdf" target="_blank">
+              <i class="fa-solid fa-file"></i>
+            </a>
+            <p>CV</p>
+          </div>
+
+          <div class="whatsapp">
+            <a href="#" class="whatsapp-link" data-number="27761237367">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <p>WhatsApp</p>
+          </div>
+
+           <script>
+        document.querySelectorAll('.whatsapp-link').forEach(function (link) {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const number = link.getAttribute('data-number');
+            const url = 'https://wa.me/' + number;
+            safeRedirect(url);
+          });
+        });
+      </script>
+
+          <div class="email">
+            <a href="#" id="email-link">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+            <p>Email</p>
+          </div>
+
+            <script>
+        // Obfuscate email address
+        const user = 'rdhdesign01';
+        const domain = 'gmail.com';
+        const email = user + '@' + domain;
+        document.getElementById('email-link').addEventListener('click', function (e) {
+          e.preventDefault();
+          // Create a temporary anchor to open mailto in a new tab
+          const mailtoUrl = 'mailto:' + email;
+          safeRedirect(mailtoUrl);
+        });
+      </script>
+
+          <div class="facebook">
+            <a href="https://www.facebook.com/profile.php?id=61575630000164" target="_blank"><i
+                class="fa fa-facebook"></i></a>
+            <p>Facebook</p>
+          </div>
+
+          <div class="insta">
+            <a href="https://www.instagram.com/rdh.design01/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <p>Instagram</p>
+          </div>
+
+          <div class="linkedin">
+            <a href="https://www.linkedin.com/in/regan-harebottle-34a8b4262/" target="_blank">
+              <i class="fa fa-linkedin">
+              </i>
+            </a>
+            <p>LinkedIn</p>
+          </div><!--linkedin-->
+
+          <div class="git-hub">
+            <a href="https://github.com/DesignRDH" target="_blank">
+              <i class="fa-brands fa-github">
+              </i>
+            </a>
+            <p>GitHub</p>
+          </div><!--git-hub-->
+
+          <div class="copyrights" style="text-align:center; margin-top:10px; font-size:0.9em;">
+            &copy; 2025-2026 RDH Design. All rights reserved.
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+
+    <script>
+      // Get the button:
+      let mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () { scrollFunction() };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+
+    </script>
+</body>
+
+</html>
